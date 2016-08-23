@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router';
-import axios from 'axios';
 
+import * as api from './lib/request';
 import RelayButton from './RelayButton';
+
 var relay1Value = 0;
 var relay2Value = 0;
 var relay3Value = 0;
@@ -23,49 +24,42 @@ export default class Home extends Component {
 
   _relay1(value){
     console.log('relay 1 pressed');
-    axios.post('http://localhost:8000/controlRelay',{relayNumber:11,value})
+    api.post({relayNumber:11,value});
   }
 
   _relay2(value){
     console.log('relay 2 pressed');
-    relay2Value = relay2Value == 0 ? 1:0;
-    axios.post('http://localhost:8000/controlRelay',{relayNumber:13,value})
+    api.post({relayNumber:13,value});
   }
 
   _relay3(value){
     console.log('relay 3 pressed');
-    relay3Value = relay3Value == 0 ? 1:0;
-    axios.post('http://localhost:8000/controlRelay',{relayNumber:15,value})
+    api.post({relayNumber:15,value});
   }
 
   _relay4(value){
     console.log('relay 4 pressed');
-    relay4Value = relay4Value == 0 ? 1:0;
-    axios.post('http://localhost:8000/controlRelay',{relayNumber:29,value})
+    api.post({relayNumber:29,value});
   }
 
   _relay5(value){
     console.log('relay 5 pressed');
-    relay5Value = relay5Value == 0 ? 1:0;
-    axios.post('http://localhost:8000/controlRelay',{relayNumber:31,value})
+    api.post({relayNumber:31,value});
   }
 
   _relay6(value){
     console.log('relay 6 pressed');
-    relay6Value = relay6Value == 0 ? 1:0;
-    axios.post('http://localhost:8000/controlRelay',{relayNumber:33,value})
+    api.post({relayNumber:33,value});
   }
 
   _relay7(value){
     console.log('relay 7 pressed');
-    relay7Value = relay7Value == 0 ? 1:0;
-    axios.post('http://localhost:8000/controlRelay',{relayNumber:35,value})
+    api.post({relayNumber:35,value});
   }
 
   _relay8(value){
     console.log('relay 8 pressed');
-    relay8Value = relay8Value == 0 ? 1:0;
-    axios.post('http://localhost:8000/controlRelay',{relayNumber:17,value})
+    api.post({relayNumber:37,value});
   }
 
 
